@@ -11,8 +11,16 @@ module ShopifyApp
         copy_file 'shop.rb', 'app/models/shop.rb'
       end
 
+      def create_user_model
+        copy_file 'user.rb', 'app/models/user.rb'
+      end
+
       def create_shop_migration
         copy_migration 'create_shops.rb'
+      end
+
+      def create_user_migration
+        copy_migration 'create_users.rb'
       end
 
       def create_session_storage_initializer
