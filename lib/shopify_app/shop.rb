@@ -3,6 +3,7 @@ module ShopifyApp
     extend ActiveSupport::Concern
 
     included do
+      has_many :users
       validates :shopify_domain, presence: true, uniqueness: true
       validates :shopify_token, presence: true
     end
